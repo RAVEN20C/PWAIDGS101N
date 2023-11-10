@@ -1,0 +1,70 @@
+{
+    "name": "Primera PWA",
+    "short_name": "PWA",
+    "description": "Su primera aplicacion PWA de IDGS101N",
+    "background_#FFF": "Primera PWA",
+    "theme_color": "#FB314E",
+    "orientation": "portrait",
+    "display": "standalone",
+    "start_url": "./index.html?utm_source=web_app_manifest",
+    "scope": "./",
+    "lang": "es-MX",
+    "icons": [
+        {
+            "src": "images/R-16.jpeg",
+            "sizes": "16x17",
+            "type": "image/jpeg"
+        },
+        {
+            "src": "images/R-32.jpeg",
+            "sizes": "32x33",
+            "type": "image/jpeg"
+        },
+        {
+            "src": "images/R-64.jpeg",
+            "sizes": "64x66",
+            "type": "image/jpeg"
+        },
+        {
+            "src": "images/R-96.jpeg",
+            "sizes": "96x99",
+            "type": "image/jpeg"
+        },
+        {
+            "src": "images/R-128.jpeg",
+            "sizes": "128x132",
+            "type": "image/jpeg"
+        },
+        {
+            "src": "images/R-192.jpeg",
+            "sizes": "192x198",
+            "type": "image/jpeg"
+        },
+        {
+            "src": "images/R-256.jpeg",
+            "sizes": "256x264",
+            "type": "image/jpeg"
+        },
+        {
+            "src": "images/R-384.jpeg",
+            "sizes": "384x396",
+            "type": "image/jpeg"
+        },
+        {
+            "src": "images/R-512.jpeg",
+            "sizes": "512x528",
+            "type": "image/jpeg"
+        },
+        {
+            "src": "images/R-1024.jpeg",
+            "sizes": "512x528",
+            "type": "image/jpeg"
+        }
+        ,
+        {
+            "src": "images/R.jpeg",
+            "sizes": "221x228",
+            "type": "image/jpeg"
+        }
+    ]
+}
