@@ -31,9 +31,9 @@ var urlsToCache = [
     './css/bootstrap-grid.min.css',
     './css/bootstrap-grid.min.css.map',
     './css/bootstrap-reboot.css',
-    './css/bootstrap-reboot.css.map ',
-    './css/bootstrap-reboot.min.css ',
-    './css/bootstrap-reboot.min.css.map ',
+    './css/bootstrap-reboot.css.map',
+    './css/bootstrap-reboot.min.css',
+    './css/bootstrap-reboot.min.css.map',
     './css/bootstrap.css',
     './css/bootstrap.css.map',
     './css/bootstrap.min.css ',
@@ -46,11 +46,12 @@ var urlsToCache = [
     './css/jquery.fancybox.min.css',
     './css/jquery.mCustomScrollbar.min.css',
     './css/meanmenu.css',
-    './css/nice - select.css',
+    './css/nice-select.css',
     './css/normalize.css ',
     './css/owl.carousel.min.css',
     './css/responsive.css',
-    './css/slick.css css / style.css',
+    './css/slick.css',
+    './css/style.css',
 
     './fonts/cochin.woff',
     './fonts/cochin.woff2 ',
@@ -63,8 +64,8 @@ var urlsToCache = [
     './fonts/fontawesome-webfont.woff',
     './fonts/fontawesome-webfont.woff2 ',
     './fonts/FontAwesome.otf',
-    './fonts/IcoMoon-Free.ttf ',
-    './fonts/Poppins-Black.ttf ',
+    './fonts/IcoMoon-Free.ttf',
+    './fonts/Poppins-Black.ttf',
     './fonts/Poppins-BlackItalic.ttf',
     './fonts/Poppins-Bold.ttf',
     './fonts/Poppins-BoldItalic.ttf',
@@ -133,6 +134,9 @@ var urlsToCache = [
     './js/popper.min.js',
     './js/slider-setting.js'
 ]
+
+
+
 self.addEventListener('install', (e) => {
     e.waitUntil(
         caches.open(CACHE_NAME)
