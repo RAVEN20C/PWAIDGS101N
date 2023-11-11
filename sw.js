@@ -136,50 +136,49 @@ var urlsToCache = [
 ]
 
 
-
-self.addEventListener('install', (e) => {
+self.addEventListener('install', e=> {
     e.waitUntil(
         caches.open(CACHE_NAME)
-            .then((cache) => {
-                return cache.addAll(urlsToCache);
-            })
+        .then(cache => {
+            return cache.addAll(urlIsToCache)
             .then(() => {
-                return self.skipWaiting();
+                self.skipWaiting()
             })
-            .catch((err) => {
-                console.log('No se registró el caché', err);
+
+            .catch(err => {
+                console.log('No se registro el cache', err);
             })
-    );
-});
+        })
+    )
+})
 
-
-self.addEventListener('install', (e) => {
+self.addEventListener('activate', e=>{
+    const cacheWhiteList = [CACHE_NAME]
     e.waitUntil(
-        caches.open(CACHE_NAME)
-            .then((cache) => {
-                return cache.addAll(urlsToCache);
-            })
-            .then(() => {
-                return self.skipWaiting();
-            })
-            .catch((err) => {
-                console.log('No se registró el caché', err);
-            })
+        caches.keys()
+        .then(cacheNames => {
+            return Promise.all(
+                cacheNames.map(cacheName =>{
+                    if(cacheWhiteList.indexOf(cacheName) === -1){
+                        //Borrar elementos que no se necesitan
+                        return caches.delete(cacheName);
+                    }
+                })
+            );
+        })
+        .then(() => {self.clients.claim();})
     );
-});
-
-
+})
 
 self.addEventListener
-    ('fetch', e => {
-        e.respondWith(
-            caches.match(e.request)
-                .then(res => {
-                    if (res) {
-                        return res;
-                    }
-                    return fetch(e.request);
-                })
-        );
-    });
-
+('fetch', e =>{
+    e.respondWith(
+        caches.match(e.request)
+        .then(res=>{
+            if(res){
+                return res;
+            }
+            return fetch(e.request);
+        })
+    );
+});
