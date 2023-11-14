@@ -1,12 +1,11 @@
 {
     "name": "Primera PWA",
     "short_name": "PWA",
-    "description": "Su primera aplicacion PWA de IDGS101N",
-    "background_#FFF": "Primera PWA",
-    "theme_color": "#FB314E",
+    "description": "Su primera aplicación PWA de IDGS101N",
+    "background_color": "#FFF",
     "orientation": "portrait",
     "display": "standalone",
-    "start_url": "./index.html?utm_source=web_app_manifest",
+    "start_url": "/PWA/desde0.html?utm_source=web_app_manifest",
     "scope": "./",
     "lang": "es-MX",
     "icons": [
@@ -65,6 +64,11 @@
             "src": "images/R.jpeg",
             "sizes": "221x228",
             "type": "image/jpeg"
+        },
+        {
+            "src": "images/Rp.png",
+            "sizes": "144x144",
+            "type": "image/png"
         }
     ]
 }
